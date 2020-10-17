@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo App</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1 class="heading">9. DOM объекты. Список задач</h1>
+
+  <main class="container">
+    <form class="form" onsubmit="return false">
+      <h2 class="form__heading">Внесите новую задачу</h2>
+
+      <label class="form__label text"> Название задачи
+        <input class="form__input input__heading" type="text" placeholder="Введите название задачи" required>
+      </label>
+
+      <p class="text_warning text_warning_heading">Введите наименование задачи, не менее 10 символов</p>
+
+      <label class="form__label text"> Описание задачи
+        <textarea class="form__input input__desk" placeholder="Введите описание задачи"
+          required></textarea>
+      </label>
+
+      <p class="text_warning text_warning_desc">Введите наименование задачи, не менее 50 символов</p>
+
+      <label class="form__label text"> Выполнить до:
+        <input class="form__input input__date" type="date" required>
+      </label>
+
+      <p class="text_warning text_warning_date">Введите действительную дату</p>
+
+      <button class="form-btn" type="button" disabled>Внести задачу в список</button>
+    </form>
+
+    <section class="todo">
+      <h2 class="form__heading">Список задач</h2>
+
+      <ul class="tabs">
+        <li class="tabs-item tabs_active"  data-status="all">
+          <a class="tabs__link" href="">все задачи</a>
+        </li>
+        <li class="tabs-item" data-status="inWork">
+          <a class="tabs__link" href="">в работе</a>
+        </li>
+        <li class="tabs-item" data-status="ok">
+          <a class="tabs__link" href="">выполненные</a>
+        </li>
+      </ul>
+
+      <ol class="todo__list">
+        <li class="todo__list__items ok">
+          <h3 class="items__heading">Выучить HTML и CSS</h3>
+
+          <p class="items__description performed" title="Клик, для изменения статуса задачи">Успешно закончить модуль
+            веб-верстки, курса full-stack от SKILLBOX</p>
+
+          <p class="items__deadline">
+            <time datetime="2020-07-09">Дата начала: 09.07.2020</time>
+            <time datetime="2020-12-01">Выполнить до: 01.12.2020</time>
+          </p>
+
+          <button class="items__btn" type="button" aria-label="close button"></button>
+        </li>
+        <li class="todo__list__items">
+          <h3 class="items__heading">Выучить JS</h3>
+
+          <p class="items__description" title="Клик, для изменения статуса задачи">Успешно закончить модуль Java Script, курса
+            full-stack от SKILLBOX</p>
+
+          <p class="items__deadline">
+            <time datetime="2020-07-09">Дата начала: 09.07.2020</time>
+            <time datetime="2020-12-01">Выполнить до: 01.12.2020</time>
+          </p>
+
+          <button class="items__btn" type="button" aria-label="close button"></button>
+        </li>
+        <li class="todo__list__items">
+          <h3 class="items__heading">Выучить PHP</h3>
+
+          <p class="items__description" title="Клик, для изменения статуса задачи">Успешно закончить модуль PHP, курса
+            full-stack от SKILLBOX</p>
+
+          <p class="items__deadline">
+            <time datetime="2020-07-09">Дата начала: 09.07.2020</time>
+            <time datetime="2020-12-01">Выполнить до: 01.12.2020</time>
+          </p>
+
+          <button class="items__btn" type="button" aria-label="close button"></button>
+        </li>
+      </ol>
+    </section>
+  </main>
+</body>
+
+</html>
